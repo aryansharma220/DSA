@@ -5,16 +5,18 @@ import java.util.Scanner;
 public class Factorial {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int result = trailingZeros(sc.nextInt());
+        int result = fact1(sc.nextInt());
         System.out.println(result);
         sc.close();
     }
 
+    static int fact=1;
     public static int fact1(int n){
         if(n==0 || n==1){
-            return 1;
+            return fact;
         }
-        return n*fact1(n-1);
+        fact=fact*n;
+        return fact1(n-1);
     }
 
     public static int fact2(int n){
