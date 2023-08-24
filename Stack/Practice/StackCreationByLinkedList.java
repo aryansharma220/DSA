@@ -52,6 +52,5 @@ public class StackCreationByLinkedList {
         s.push(20);
         s.push(30);
         System.out.println(s.peek());
-
     }
 }
