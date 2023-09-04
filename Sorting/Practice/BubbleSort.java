@@ -1,9 +1,9 @@
 public class BubbleSort {
     public static void main(String[] args) {
-        int[] arr={1,2,3,4,5};
+        int[] arr={13,12,4,1,5,23};
         int n =arr.length;
         print(arr,n);
-        bubbleSort(arr, n);
+        selectionSort(arr);
         System.out.println();
         print(arr,n);
     }
@@ -27,5 +27,4 @@ public class BubbleSort {
             if(isSorted==1){return;}
         }
     }
-
 }
