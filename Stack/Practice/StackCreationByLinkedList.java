@@ -18,6 +18,7 @@ class myStack{
         Node temp=new Node(x);
         temp.next=head;
         head=temp;
+        System.out.println("Item pushed -> "+head.data);
         size++;
     }
 
@@ -27,11 +28,13 @@ class myStack{
         // Node temp=head;
         head=head.next;
         size--;
+        System.out.print("Item popped -> ");
         return res;
     }
 
     int peek(){
         if(head==null) return Integer.MAX_VALUE;
+        System.out.print("Item on top -> ");
         return head.data;
     }
 
@@ -40,6 +43,7 @@ class myStack{
     }
 
     int size(){
+        System.out.print("Size of stack -> ");
         return size;
     }
 }
@@ -52,5 +56,8 @@ public class StackCreationByLinkedList {
         s.push(20);
         s.push(30);
         System.out.println(s.peek());
+        System.out.println(s.pop());
+        System.out.println(s.peek());
+        System.out.println(s.size());
     }
 }
